@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 - BBS</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>게시판</h1>
+            <button id="writeBtn" class="btn btn-primary">글쓰기</button>
+        </header>
+
+        <!-- 게시글 목록 -->
+        <div id="boardList" class="board-list">
+            <div class="loading">로딩 중...</div>
+        </div>
+
+        <!-- 페이지네이션 -->
+        <div id="pagination" class="pagination"></div>
+
+        <!-- 글쓰기 모달 -->
+        <div id="writeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle">새 글 작성</h2>
+                <form id="postForm">
+                    <input type="hidden" id="postId">
+                    <div class="form-group">
+                        <label for="title">제목</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">작성자</label>
+                        <input type="text" id="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">내용</label>
+                        <textarea id="content" rows="10" required></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">저장</button>
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">취소</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- 게시글 상세 보기 모달 -->
+        <div id="viewModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="postDetail">
+                    <h2 id="detailTitle"></h2>
+                    <div class="post-meta">
+                        <span id="detailAuthor"></span>
+                        <span id="detailDate"></span>
+                    </div>
+                    <div id="detailContent" class="post-content"></div>
+                    <div class="post-actions">
+                        <button id="editBtn" class="btn btn-primary">수정</button>
+                        <button id="deleteBtn" class="btn btn-danger">삭제</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
