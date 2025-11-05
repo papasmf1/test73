@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>개발자 프로필</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="theme-toggle">
+        <button id="themeButton" type="button" aria-label="테마 전환">
+          🌙
+        </button>
+      </div>
+      <div class="hero__content">
+        <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="프로필 이미지" class="hero__avatar" />
+        <div>
+          <h1 class="hero__name">홍길동</h1>
+          <p class="hero__role">Full-Stack Developer</p>
+          <p class="hero__summary">
+            사용자 경험을 중심으로 한 웹 애플리케이션을 설계하고, 확장성과 유지보수성을 갖춘 코드를 작성하는 것을 즐깁니다.
+          </p>
+          <div class="hero__links">
+            <a href="mailto:honggildong@example.com">이메일</a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="card">
+        <h2>기술 스택</h2>
+        <ul class="chip-list">
+          <li>JavaScript (ES6+)</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>GraphQL</li>
+          <li>PostgreSQL</li>
+          <li>Docker</li>
+          <li>CI/CD</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>경력</h2>
+        <article class="timeline">
+          <div class="timeline__item">
+            <time>2023 - 현재</time>
+            <div>
+              <h3>Awesome Corp · Senior Engineer</h3>
+              <p>
+                모놀리식 서비스를 마이크로서비스 아키텍처로 전환하여 배포 시간을 40% 단축하고,
+                개발 팀의 생산성을 향상시켰습니다.
+              </p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <time>2020 - 2023</time>
+            <div>
+              <h3>Creative Labs · Frontend Developer</h3>
+              <p>
+                반응형 UI 라이브러리 구축 및 디자인 시스템 도입을 주도하여 제품 간 일관성을 확보했습니다.
+              </p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>대표 프로젝트</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Insight Dashboard</h3>
+            <p>
+              대시보드형 분석 플랫폼으로, 데이터 시각화와 실시간 알림을 제공하며 주요 고객 지표를 한눈에 볼 수 있도록 지원했습니다.
+            </p>
+            <ul>
+              <li>React · D3.js</li>
+              <li>GraphQL API 통합</li>
+              <li>24시간 모니터링 알림 시스템</li>
+            </ul>
+          </article>
+          <article class="project">
+            <h3>Collab Hub</h3>
+            <p>
+              분산 팀을 위한 협업 툴로, 실시간 문서 편집과 태스크 관리 기능을 제공하며 사용자 만족도를 30% 향상시켰습니다.
+            </p>
+            <ul>
+              <li>Next.js · WebSocket</li>
+              <li>Serverless 아키텍처</li>
+              <li>애자일 업무 흐름 자동화</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>연락하기</h2>
+        <form class="contact-form" aria-label="연락처 폼">
+          <label>
+            이름
+            <input type="text" name="name" placeholder="이름" required />
+          </label>
+          <label>
+            이메일
+            <input type="email" name="email" placeholder="example@email.com" required />
+          </label>
+          <label>
+            메시지
+            <textarea name="message" rows="4" placeholder="하고 싶은 말을 자유롭게 남겨주세요." required></textarea>
+          </label>
+          <button type="submit">보내기</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>© <span id="currentYear"></span> Hong Gil-dong. All rights reserved.</small>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
