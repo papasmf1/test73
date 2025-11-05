@@ -15,3 +15,11 @@ Thumbs.db
 # 로그 파일
 *.log
 
+# Node.js
+node_modules/
+package-lock.json
+
+# Playwright
+playwright-report/
+test-results/
+playwright/.cache/
